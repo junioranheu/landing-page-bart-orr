@@ -21,6 +21,10 @@
   margin-top: 2vw;
 }
 
+.margemPequena {
+  margin-top: 0.9vw;
+}
+
 .titulo {
   font-family: 'Montserrat' !important;
   src: local('Montserrat');
@@ -29,4 +33,16 @@
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: -0.02em;
+}
+
+.icone {
+  color: #BF9B74;
+  padding-right: 0.75vw;
+  padding-left: 0.75vw;
+  height: 25px;
+}
+
+.icone:hover {
+  color: #FFFFFF;
+  cursor: pointer;
 }
