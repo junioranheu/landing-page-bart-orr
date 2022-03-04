@@ -50,35 +50,32 @@ export default function Index() {
       </div>
 
       <div style={{ marginTop: '2vw' }}>
-        <span className={`${Styles.titulo} ${Styles.tituloDourado}`}>NAACP WINNER</span>
+        <span className={Styles.tituloDourado}>NAACP WINNER</span>
       </div>
 
-      <div className={Styles.divBio} style={{ marginTop: '10vw' }}>
-        <div className={Styles.divBioImagem}>
-          <Image src={ImagemTres} alt='' width={632} height={860} />
+      <div className={Styles.divBioWrapper} style={{ marginTop: '9vw' }}>
+        <div className={Styles.divBioEsquerda}>
+          <Image className={Styles.card} src={ImagemTres} alt='' width={632} height={860} />
         </div>
 
-        <div className={Styles.divBioTexto}>
-          <h1>BIO</h1>
-          <h2>
-            Bartholomew Orr II aka B2 breaks away from the trivialities of music, and instead chooses to focus on what matters most – advocating for the expression of emotion in its purest form.
+        <div className={Styles.divBioDireita}>
+          <span className={`${Styles.tituloDourado} ${Styles.tituloGigante}`}>BIO</span>
 
-            For Bart, music represents an all-encompassing surrender, a pledge to self-honesty or what he calls Barthology, the truth that’s too good to be true.
+          <div className={Styles.spanBio}>
+            <span>
+              Bartholomew Orr II aka B2 breaks away from the trivialities of music, and instead chooses to focus on what matters most – advocating for the expression of emotion in its purest form.
+            </span>
 
-            Often soft-spoken and invariably sullen in his producing style, this Grammy nominated Stellar award-winning producer delves into deeper things of spirituality. Every beat is deeply rooted in conveying the most intimate moments of the human experience. Above all, it’s deep, it’s sensual – and it grooves.
-          </h2>
+            <span>
+              For Bart, music represents an all-encompassing surrender, a pledge to self-honesty or what he calls Barthology, the truth that’s too good to be true.
+            </span>
+
+            <span>
+              Often soft-spoken and invariably sullen in his producing style, this Grammy nominated Stellar award-winning producer delves into deeper things of spirituality. Every beat is deeply rooted in conveying the most intimate moments of the human experience. Above all, it’s deep, it’s sensual – and it grooves.
+            </span>
+          </div>
         </div>
       </div>
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
   )
 }
