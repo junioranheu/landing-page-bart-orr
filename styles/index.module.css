@@ -1,5 +1,32 @@
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.logo {
+  margin-top: 3vw;
+}
+
+.divCard {
+  margin-top: 1.4vw;
+}
+
+.card {
+  border-radius: 8px;
+}
+
+.margemTexto {
+  margin-top: 2vw;
+}
+
+.titulo {
+  font-family: 'Montserrat' !important;
+  src: local('Montserrat');
+  color: #FFFFFF;
+  font-size: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
