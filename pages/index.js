@@ -8,10 +8,8 @@ import Styles from '../styles/index.module.css';
 export default function Index() {
   return (
     <div className={Styles.container}>
-      {/* <div className={Styles.overlay}></div> */}
-
-      <div className={Styles.logo}>
-        <Image src={Logo} alt='' width={65} height={65} />
+      <div className={Styles.divLogo}>
+        <Image src={Logo} alt='' width={63} height={63} />
       </div>
 
       <div className={Styles.divCard}>
@@ -31,23 +29,18 @@ export default function Index() {
         <FontAwesomeIcon icon={faSpotify} className={Styles.icone} />
       </div>
 
-      <div className={Styles.divCard}>
-        <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
-      </div>
-      <div className={Styles.divCard}>
-        <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
-      </div>
-      <div className={Styles.divCard}>
-        <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
-      </div>
-      <div className={Styles.divCard}>
-        <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
-      </div>
-      <div className={Styles.divCard}>
-        <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
-      </div>
-      <div className={Styles.divCard}>
-        <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
+      <div className={Styles.divBotoes}>
+        <a className={Styles.botao} href='/'>
+          <span>
+            LISTEN HERE
+          </span>
+        </a>
+
+        <a className={Styles.botao} href='/'>
+          <span>
+            SHOP HERE
+          </span>
+        </a>
       </div>
     </div>
   )
