@@ -1,6 +1,7 @@
 import { faAmazon, faApple, faElementor, faFacebook, faItunes, faPinterest, faSoundcloud, faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
+import Link from 'next/link';
 import ImagemDois from '../static/images/dois.webp';
 import Logo from '../static/images/logo.webp';
 import ImagemTres from '../static/images/tres.webp';
@@ -32,17 +33,21 @@ export default function Index() {
       </div>
 
       <div className={Styles.divBotoes}>
-        <a className={Styles.botao} href='/'>
-          <span>
-            LISTEN HERE
-          </span>
-        </a>
+        <Link href='/'>
+          <a className={Styles.botao}>
+            <span>
+              LISTEN HERE
+            </span>
+          </a>
+        </Link>
 
-        <a className={Styles.botao} href='/'>
-          <span>
-            SHOP HERE
-          </span>
-        </a>
+        <Link href='/'>
+          <a className={Styles.botao}>
+            <span>
+              SHOP HERE
+            </span>
+          </a>
+        </Link>
       </div>
 
       <div className={Styles.divCard} style={{ marginTop: '5vw' }}>
