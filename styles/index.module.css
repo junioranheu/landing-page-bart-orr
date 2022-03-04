@@ -10,6 +10,10 @@
 
 .divCard {
   margin-top: 1.5vw;
+  /* Shadow - https://www.cssmatic.com/box-shadow */
+  -webkit-box-shadow: 50px 40px 44px -41px rgba(217,193,161,0.24);
+  -moz-box-shadow: 50px 40px 44px -41px rgba(217,193,161,0.24);
+  box-shadow: 50px 40px 44px -41px rgba(217,193,161,0.24);
 }
 
 .card {
