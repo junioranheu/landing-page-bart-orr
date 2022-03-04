@@ -19,10 +19,6 @@
   border-radius: 5px;
 }
 
-.margemPequena {
-  margin-top: 0.9vw;
-}
-
 .titulo {
   color: #FFFFFF;
   font-size: 30px;
@@ -48,7 +44,7 @@
   height: 25px;
 }
 
-.icone:hover {
+.icone:hover, .iconeBio:hover {
   color: #FFFFFF;
   cursor: pointer;
 }
@@ -90,15 +86,14 @@
 
 .divBioEsquerda {
   margin-right: -1vw;
-  width: 30vw;
+  width: 40vw;
   display: flex;
   justify-content: flex-end;
   z-index: 1;
-  /* background-color: blue; */
 }
 
 .divBioDireita {
-  width: 30vw;
+  width: 40vw;
   block-size: fit-content;
   color: white;
   background-color: rgba(255, 255, 255, 0.1);
@@ -108,7 +103,7 @@
   padding-top: 1.2vw;
   padding-bottom: 2vw;
   border-radius: 5px;
-  margin-top: 1.8vw;
+  margin-top: 1.9vw;
 }
 
 .tituloGigante {
@@ -124,4 +119,14 @@
 .spanBio span {
   display: inline-block;
   margin-top: 1vw;
+}
+
+.iconeBio {
+  color: #BF9B74;
+
+  height: 35px;
+}
+
+.iconeBio:nth-child(n+2) {
+  padding-left: 4vw;
 }

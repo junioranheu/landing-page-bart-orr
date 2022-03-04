@@ -1,4 +1,4 @@
-import { faAmazon, faApple, faElementor, faItunes, faPinterest, faSpotify } from '@fortawesome/free-brands-svg-icons';
+import { faAmazon, faApple, faElementor, faFacebook, faItunes, faPinterest, faSoundcloud, faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import ImagemDois from '../static/images/dois.webp';
@@ -22,7 +22,7 @@ export default function Index() {
         <span className={Styles.titulo}>OUT NOW</span>
       </div>
 
-      <div className={Styles.margemPequena}>
+      <div style={{ marginTop: '0.9vw' }}>
         <FontAwesomeIcon icon={faAmazon} className={Styles.icone} />
         <FontAwesomeIcon icon={faApple} className={Styles.icone} />
         <FontAwesomeIcon icon={faElementor} className={Styles.icone} />
@@ -73,6 +73,12 @@ export default function Index() {
             <span>
               Often soft-spoken and invariably sullen in his producing style, this Grammy nominated Stellar award-winning producer delves into deeper things of spirituality. Every beat is deeply rooted in conveying the most intimate moments of the human experience. Above all, it’s deep, it’s sensual – and it grooves.
             </span>
+          </div>
+
+          <div style={{ marginTop: '1.5vw' }}>
+            <FontAwesomeIcon icon={faYoutube} className={Styles.iconeBio} />
+            <FontAwesomeIcon icon={faSoundcloud} className={Styles.iconeBio} />
+            <FontAwesomeIcon icon={faFacebook} className={Styles.iconeBio} />
           </div>
         </div>
       </div>
