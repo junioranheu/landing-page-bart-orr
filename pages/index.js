@@ -8,6 +8,8 @@ import Styles from '../styles/index.module.css';
 export default function Index() {
   return (
     <div className={Styles.container}>
+      {/* <div className={Styles.overlay}></div> */}
+
       <div className={Styles.logo}>
         <Image src={Logo} alt='' width={65} height={65} />
       </div>
