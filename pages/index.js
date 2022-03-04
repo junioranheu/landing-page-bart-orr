@@ -28,6 +28,25 @@ export default function Index() {
         <FontAwesomeIcon icon={faPinterest} className={Styles.icone} />
         <FontAwesomeIcon icon={faSpotify} className={Styles.icone} />
       </div>
+
+      <div className={Styles.divCard}>
+        <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
+      </div>
+      <div className={Styles.divCard}>
+        <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
+      </div>
+      <div className={Styles.divCard}>
+        <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
+      </div>
+      <div className={Styles.divCard}>
+        <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
+      </div>
+      <div className={Styles.divCard}>
+        <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
+      </div>
+      <div className={Styles.divCard}>
+        <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
+      </div>
     </div>
   )
 }

@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .logo {
@@ -14,7 +13,8 @@
 }
 
 .card {
-  border-radius: 8px;
+  border-radius: 5px;
+  box-shadow: 20px 15px 44px 0px rgb(221 195 170 / 13%);
 }
 
 .margemTexto {

@@ -21,3 +21,20 @@ a {
 * {
   box-sizing: border-box;
 }
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #0B0909;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #BF9B74;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #8f6f4c;
+}
