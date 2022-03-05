@@ -82,18 +82,21 @@
   width: 100vw;
   display: flex;
   justify-content: center;
+  /* background-color: pink; */
 }
 
 .divBioEsquerda {
-  margin-right: -1vw;
-  width: 40vw;
+  margin-right: -2vw;
+  /*width: 50vw;*/
+  width: auto;
   display: flex;
   justify-content: flex-end;
   z-index: 1;
+  /* background-color: yellow; */
 }
 
 .divBioDireita {
-  width: 40vw;
+  width: 30vw;
   block-size: fit-content;
   color: white;
   background-color: rgba(255, 255, 255, 0.1);
@@ -103,7 +106,8 @@
   padding-top: 1.2vw;
   padding-bottom: 2vw;
   border-radius: 5px;
-  margin-top: 1.9vw;
+  margin-top: 2vw;
+  /* background-color: blue; */
 }
 
 .tituloGigante {
