@@ -2,7 +2,7 @@ import { faAmazon, faApple, faFacebookSquare, faInstagramSquare, faSoundcloud, f
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Icone from '../components/icone';
 import SessaoWatchMe from '../components/sessaoWatchMe';
@@ -24,37 +24,49 @@ export default function Index() {
   const linkInstagram = 'https://www.instagram.com/bart_orr/?utm_medium=copy_link';
   const linkTwitter = 'https://twitter.com/bart_orr?s=21';
 
-  // Scroll: https://stackoverflow.com/questions/62497110/detect-scroll-direction-in-react-js;
-  function handleScroll(e) {
-    const window = e.currentTarget;
-    const y = window.scrollY;
-    // console.log(y);
+  const [tamanhoTotalTelaY, setTamanhoTotalTelaY] = useState(0);
+  function verificarTamanhoTotalTelaY() {
+    const body = document.body;
+    const html = document.documentElement;
+    const tamanhoTotalTelaY = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    // console.log(tamanhoTotalTelaY);
 
-    const aea = window.offSetHeight;
-    console.log(window);
-
-
-    const valorMinimo = 0.55;
-    const valorMaximo = 0.75;
-    let valorGradient;
-
-    if (y > 1000) {
-      valorGradient = 1;
-    } else {
-      valorGradient = 0.55;
-    }
-
-    document.documentElement.style.setProperty('--porcentagem-gradient', valorGradient);
-    document.title = 'Bart Orr ' + y;
+    setTamanhoTotalTelaY(tamanhoTotalTelaY);
   }
 
   useEffect(() => {
     // Título da página;
     document.title = 'Bart Orr';
 
+    // Atribuir valor à variável tamanhoTotalTelaY, usada em handleScroll();
+    verificarTamanhoTotalTelaY();
+
     // Scroll;
-    window.addEventListener('scroll', handleScroll);
-  }, [handleScroll]);
+    if (tamanhoTotalTelaY) {
+      window.addEventListener('scroll', handleScroll);
+    }
+  }, [tamanhoTotalTelaY]);
+
+  // Scroll: https://stackoverflow.com/questions/62497110/detect-scroll-direction-in-react-js;
+  function handleScroll(e) {
+    const window = e.currentTarget;
+    const yAtual = window.scrollY;
+    // console.log(yAtual);
+
+    const valorMinimo = 0.55;
+    const valorMaximo = 0.75;
+    let valorGradient = (valorMaximo * yAtual) / tamanhoTotalTelaY;
+    // console.log(valorGradient);
+
+    if (valorGradient < valorMinimo) {
+      valorGradient = valorMinimo;
+    } else if (valorGradient > valorMaximo) {
+      valorGradient = valorMaximo;
+    }
+
+    document.documentElement.style.setProperty('--porcentagem-gradient', valorGradient);
+    document.title = 'Bart Orr - ' + yAtual + ' - ' + valorGradient;
+  }
 
   return (
     <div className={Styles.container}>
