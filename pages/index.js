@@ -43,7 +43,11 @@ export default function Index() {
 
     // Scroll;
     if (tamanhoTotalTelaY) {
-      window.addEventListener('scroll', handleScroll);
+      const env = process.env.NODE_ENV;
+      console.log(env);
+      if (env === "production") {
+        window.addEventListener('scroll', handleScroll);
+      }
     }
   }, [tamanhoTotalTelaY]);
 
@@ -54,18 +58,13 @@ export default function Index() {
     // console.log(yAtual);
 
     const valorMinimo = 0.55;
-    const valorMaximo = 0.75;
-    let valorGradient = (valorMaximo * yAtual) / tamanhoTotalTelaY;
+    const valorMaximo = 0.88;
+    const diferencaEntreMinMax = valorMaximo - valorMinimo;
+    let valorGradient = valorMinimo + ((diferencaEntreMinMax / tamanhoTotalTelaY) * yAtual);
     // console.log(valorGradient);
 
-    if (valorGradient < valorMinimo) {
-      valorGradient = valorMinimo;
-    } else if (valorGradient > valorMaximo) {
-      valorGradient = valorMaximo;
-    }
-
     document.documentElement.style.setProperty('--porcentagem-gradient', valorGradient);
-    document.title = 'Bart Orr - ' + yAtual + ' - ' + valorGradient;
+    // document.title = 'Bart Orr | ' + yAtual + ' - ' + valorGradient;
   }
 
   return (
