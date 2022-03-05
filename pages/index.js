@@ -1,4 +1,4 @@
-import { faAmazon, faApple, faElementor, faFacebookSquare, faItunes, faPinterest, faSoundcloud, faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faAmazon, faApple, faFacebookSquare, faSoundcloud, faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,6 +15,13 @@ import ImagemUm from '../static/images/um.webp';
 import Styles from '../styles/index.module.css';
 
 export default function Index() {
+  const linkAmazon = 'https://www.amazon.com/dp/B09RG95HP5/ref=sr_1_1?keywords=Bart+Orr&qid=1643628408&refinements=p_n_feature_browse-bin%3A625150011&rnid=625149011&s=dmusic&search-type=ss&sr=1-1&tag=linkfire-smarturl-20';
+  const linkApple = 'https://music.apple.com/br/album/no-fear/1607557238';
+  const linkYoutube = 'https://www.youtube.com/channel/UC7v-kdJUSvwp_abmvFrUYzg';
+  const linkSpotify = 'https://open.spotify.com/album/0c9wsVQ8VQl0Cs0KRHfLLU';
+  const linkSoundCloud = 'https://soundcloud.com/b2musiq?ref=clipboard&p=i&c=1&si=C17F375C95BD403985FC4DDBF36F3E96&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing';
+  const linkFacebook = 'https://www.facebook.com/barthologhy';
+
   useEffect(() => {
     document.title = 'Bart Orr';
   }, []);
@@ -35,26 +42,24 @@ export default function Index() {
       </div>
 
       <div style={{ marginTop: '0.9vw' }}>
-        <FontAwesomeIcon icon={faAmazon} className={Styles.icone} />
-        <FontAwesomeIcon icon={faApple} className={Styles.icone} />
-        <FontAwesomeIcon icon={faElementor} className={Styles.icone} />
-        <FontAwesomeIcon icon={faItunes} className={Styles.icone} />
-        <FontAwesomeIcon icon={faPinterest} className={Styles.icone} />
-        <FontAwesomeIcon icon={faSpotify} className={Styles.icone} />
+        <FontAwesomeIcon icon={faAmazon} className={Styles.icone} onClick={() => { window.open(linkAmazon, '_blank') }} />
+        <FontAwesomeIcon icon={faApple} className={Styles.icone} onClick={() => { window.open(linkApple, '_blank') }} />
+        <FontAwesomeIcon icon={faYoutube} className={Styles.icone} onClick={() => { window.open(linkYoutube, '_blank') }} />
+        <FontAwesomeIcon icon={faSpotify} className={Styles.icone} onClick={() => { window.open(linkSpotify, '_blank') }} />
       </div>
 
       {/* Botões */}
       <div className={Styles.divBotoes}>
-        <Link href='/'>
-          <a className={Styles.botao}>
+        <Link href='https://smarturl.it/B2NoFear'>
+          <a className={Styles.botao} target='_blank'>
             <span>
               LISTEN HERE
             </span>
           </a>
         </Link>
 
-        <Link href='/'>
-          <a className={Styles.botao}>
+        <Link href='https://smarturl.it/B2NoFear'>
+          <a className={Styles.botao} target='_blank'>
             <span>
               SHOP HERE
             </span>
@@ -95,9 +100,9 @@ export default function Index() {
           </div>
 
           <div style={{ marginTop: '1.8vw' }}>
-            <Icone key={uuidv4()} icone={faYoutube} classes={Styles.iconeBio} />
-            <Icone key={uuidv4()} icone={faSoundcloud} classes={Styles.iconeBio} />
-            <Icone key={uuidv4()} icone={faFacebookSquare} classes={Styles.iconeBio} />
+            <Icone key={uuidv4()} icone={faYoutube} classes={Styles.iconeBio} url={linkYoutube} />
+            <Icone key={uuidv4()} icone={faSoundcloud} classes={Styles.iconeBio} url={linkSoundCloud} />
+            <Icone key={uuidv4()} icone={faFacebookSquare} classes={Styles.iconeBio} url={linkFacebook} />
           </div>
         </div>
       </div>

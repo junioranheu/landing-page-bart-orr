@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 
-export default function Icone({ icone, classes }) {
+export default function Icone({ icone, classes, url }) {
     const [animar, setAnimar] = useState('');
 
     function handleAnimar() {
@@ -15,7 +15,13 @@ export default function Icone({ icone, classes }) {
     }
 
     return (
-        <FontAwesomeIcon icon={icone} className={`${classes} ${animar}`} onMouseEnter={() => handleAnimar()} onMouseLeave={() => handleAnimar()} />
+        <FontAwesomeIcon
+            icon={icone}
+            className={`${classes} ${animar}`}
+            onMouseEnter={() => handleAnimar()}
+            onMouseLeave={() => handleAnimar()}
+            onClick={() => { window.open(url, '_blank') }}
+        />
     )
 }
 
