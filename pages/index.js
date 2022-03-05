@@ -1,7 +1,8 @@
-import { faAmazon, faApple, faElementor, faFacebook, faItunes, faPinterest, faSoundcloud, faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faAmazon, faApple, faElementor, faFacebookSquare, faItunes, faPinterest, faSoundcloud, faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
+import Icone from '../components/icone';
 import ImagemDois from '../static/images/dois.webp';
 import Logo from '../static/images/logo.webp';
 import ImagemTres from '../static/images/tres.webp';
@@ -81,9 +82,9 @@ export default function Index() {
           </div>
 
           <div style={{ marginTop: '1.5vw' }}>
-            <FontAwesomeIcon icon={faYoutube} className={Styles.iconeBio} />
-            <FontAwesomeIcon icon={faSoundcloud} className={Styles.iconeBio} />
-            <FontAwesomeIcon icon={faFacebook} className={Styles.iconeBio} />
+            <Icone key={1} icone={faYoutube} classes={Styles.iconeBio} />
+            <Icone key={2} icone={faSoundcloud} classes={Styles.iconeBio} />
+            <Icone key={3} icone={faFacebookSquare} classes={Styles.iconeBio} />
           </div>
         </div>
       </div>
