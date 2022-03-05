@@ -24,9 +24,37 @@ export default function Index() {
   const linkInstagram = 'https://www.instagram.com/bart_orr/?utm_medium=copy_link';
   const linkTwitter = 'https://twitter.com/bart_orr?s=21';
 
+  // Scroll: https://stackoverflow.com/questions/62497110/detect-scroll-direction-in-react-js;
+  function handleScroll(e) {
+    const window = e.currentTarget;
+    const y = window.scrollY;
+    // console.log(y);
+
+    const aea = window.offSetHeight;
+    console.log(window);
+
+
+    const valorMinimo = 0.55;
+    const valorMaximo = 0.75;
+    let valorGradient;
+
+    if (y > 1000) {
+      valorGradient = 1;
+    } else {
+      valorGradient = 0.55;
+    }
+
+    document.documentElement.style.setProperty('--porcentagem-gradient', valorGradient);
+    document.title = 'Bart Orr ' + y;
+  }
+
   useEffect(() => {
+    // Título da página;
     document.title = 'Bart Orr';
-  }, []);
+
+    // Scroll;
+    window.addEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   return (
     <div className={Styles.container}>

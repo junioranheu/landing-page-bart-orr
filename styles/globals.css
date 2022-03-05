@@ -1,8 +1,13 @@
+:root {
+  --porcentagem-gradient: 0.55;
+}
+
 html, body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 
   /* Sem highlight */
   -webkit-touch-callout: none;
@@ -17,8 +22,7 @@ html, body {
   src: local('Montserrat');
 
   /* Imagem */
-  /* background: url('../static/images/background.webp') no-repeat center center fixed; */
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../static/images/background.webp') no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, var(--porcentagem-gradient)), rgba(0, 0, 0, var(--porcentagem-gradient))), url('../static/images/background.webp') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
