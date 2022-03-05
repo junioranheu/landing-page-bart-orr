@@ -35,8 +35,24 @@ export default function Index() {
   }
 
   useEffect(() => {
+    // Scroll: https://stackoverflow.com/questions/62497110/detect-scroll-direction-in-react-js;
+    function handleScroll(e) {
+      const window = e.currentTarget;
+      const yAtual = window.scrollY;
+      // console.log(yAtual);
+
+      const valorMinimo = 0.55;
+      const valorMaximo = 0.88;
+      const diferencaEntreMinMax = valorMaximo - valorMinimo;
+      let valorGradient = valorMinimo + ((diferencaEntreMinMax / tamanhoTotalTelaY) * yAtual);
+      // console.log(valorGradient);
+
+      document.documentElement.style.setProperty('--porcentagem-gradient', valorGradient);
+      // document.title = 'Bart Orr | ' + yAtual + ' - ' + valorGradient;
+    }
+
     // Título da página;
-    document.title = 'Bart Orr';
+    document.title = 'Bart Orr — Em React.js, Next.js';
 
     // Atribuir valor à variável tamanhoTotalTelaY, usada em handleScroll();
     verificarTamanhoTotalTelaY();
@@ -44,28 +60,11 @@ export default function Index() {
     // Scroll;
     if (tamanhoTotalTelaY) {
       const env = process.env.NODE_ENV;
-      console.log(env);
       if (env === "production") {
         window.addEventListener('scroll', handleScroll);
       }
     }
   }, [tamanhoTotalTelaY]);
-
-  // Scroll: https://stackoverflow.com/questions/62497110/detect-scroll-direction-in-react-js;
-  function handleScroll(e) {
-    const window = e.currentTarget;
-    const yAtual = window.scrollY;
-    // console.log(yAtual);
-
-    const valorMinimo = 0.55;
-    const valorMaximo = 0.88;
-    const diferencaEntreMinMax = valorMaximo - valorMinimo;
-    let valorGradient = valorMinimo + ((diferencaEntreMinMax / tamanhoTotalTelaY) * yAtual);
-    // console.log(valorGradient);
-
-    document.documentElement.style.setProperty('--porcentagem-gradient', valorGradient);
-    // document.title = 'Bart Orr | ' + yAtual + ' - ' + valorGradient;
-  }
 
   return (
     <div className={Styles.container}>
