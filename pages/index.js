@@ -1,4 +1,4 @@
-import { faAmazon, faApple, faFacebookSquare, faSoundcloud, faSpotify, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faAmazon, faApple, faFacebookSquare, faInstagramSquare, faSoundcloud, faSpotify, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -21,6 +21,8 @@ export default function Index() {
   const linkSpotify = 'https://open.spotify.com/album/0c9wsVQ8VQl0Cs0KRHfLLU';
   const linkSoundCloud = 'https://soundcloud.com/b2musiq?ref=clipboard&p=i&c=1&si=C17F375C95BD403985FC4DDBF36F3E96&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing';
   const linkFacebook = 'https://www.facebook.com/barthologhy';
+  const linkInstagram = 'https://www.instagram.com/bart_orr/?utm_medium=copy_link';
+  const linkTwitter = 'https://twitter.com/bart_orr?s=21';
 
   useEffect(() => {
     document.title = 'Bart Orr';
@@ -127,23 +129,27 @@ export default function Index() {
         url={'https://www.youtube.com/embed/hQaZlzoPOa8'}
         botao={'WATCH ME'} isVideo={true} src={''} srcWidth={0} srcHeight={0} />
 
-{/* Contato */}
+      {/* Contato */}
+      <div style={{ marginTop: '9vw' }}>
+        <span className={Styles.titulo}>FOLLOW BART ORR</span>
+      </div>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div style={{ marginTop: '0.9vw' }}>
+        <FontAwesomeIcon icon={faFacebookSquare} className={Styles.icone} onClick={() => { window.open(linkFacebook, '_blank') }} />
+        <FontAwesomeIcon icon={faInstagramSquare} className={Styles.icone} onClick={() => { window.open(linkInstagram, '_blank') }} />
+        <FontAwesomeIcon icon={faTwitter} className={Styles.icone} onClick={() => { window.open(linkTwitter, '_blank') }} />
+        <FontAwesomeIcon icon={faYoutube} className={Styles.icone} onClick={() => { window.open(linkYoutube, '_blank') }} />
+      </div>
+
+      <div className={Styles.divBotoes}>
+        <Link href='/'>
+          <a className={Styles.botao} target='_blank'>
+            <span>
+              CONTACT
+            </span>
+          </a>
+        </Link>
+      </div>
     </div>
   )
 }
