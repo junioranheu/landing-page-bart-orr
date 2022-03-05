@@ -11,6 +11,16 @@
   box-shadow: 25px 15px 44px -15px rgba(217, 193, 161, 0.24);
 }
 
+.logo {
+  width: 63px;
+  height: 63px;
+}
+
+.imagemUm {
+  width: 504px;
+  height: 504px;
+}
+
 .card {
   border-radius: 5px;
 }
@@ -43,6 +53,11 @@
 .icone:hover, .iconeBio:hover {
   color: #FFFFFF;
   cursor: pointer;
+}
+
+.fotoGrande {
+  width: 857px;
+  height: 857px;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=- Botões =-=-=-=-=-=-=-=-=-=-=-=- */
@@ -129,6 +144,10 @@
   margin-top: 1vw;
 }
 
+.margemIconesBio {
+  margin-top: 1.8vw;
+}
+
 .iconeBio {
   color: #BF9B74;
   height: 35px;
@@ -139,20 +158,20 @@
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=- Youtube =-=-=-=-=-=-=-=-=-=-=-=- */
-.videoContainer {
+.youtubeContainer {
   margin-top: 1.2vw;
   overflow: hidden;
   position: relative;
   width: 45%;
 }
 
-.videoContainer::after {
+.youtubeContainer::after {
   padding-top: 56.25%;
   display: block;
   content: '';
 }
 
-.videoContainer iframe {
+.youtubeContainer iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -173,12 +192,12 @@
   margin-top: 2vw;
 }
 
-.margemGigante{
-  margin-top: 9vw;
-}
-
 .margemIcones {
   margin-top: 1vw;
+}
+
+.margemGigante {
+  margin-top: 9vw;
 }
 
 .margemFotoGrande {
@@ -197,42 +216,216 @@
 /* =-=-=-=-=-=-=-=-=-=-=-=- Media queries =-=-=-=-=-=-=-=-=-=-=-=- */
 /* hi-res laptops and desktops */
 @media (max-width:1281px) {
-  .container {
+  /* .container {
     background-color: pink;
+  } */
+
+  .margemLogo {
+    margin-top: 4vw;
+  }
+
+  .margemDivImagemUm {
+    margin-top: 2vw;
+  }
+
+  .margemTitulo {
+    margin-top: 2.5vw;
+  }
+
+  .margemIcones {
+    margin-top: 1.5vw;
+  }
+
+  .divBotoes {
+    margin-top: 1.5vw;
+  }
+
+  .divBioDireita {
+    width: 50vw;
+  }
+
+  .youtubeContainer {
+    margin-top: 1.8vw;
+    width: 60%;
   }
 }
 
 /* big landscape tablets, laptops, and desktops */
 @media (max-width:1025px) {
-  .container {
+  /* .container {
     background-color: blue;
-  }
+  } */
 }
 
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (max-width:801px) {
-  .container {
+  /* .container {
     background-color: green;
+  } */
+
+  .margemLogo {
+    margin-top: 7vw;
+  }
+
+  .logo {
+    width: 39px;
+    height: 39px;
+  }
+
+  .margemDivImagemUm {
+    margin-top: 4vw;
+  }
+
+  .margemTitulo {
+    margin-top: 5vw;
+  }
+
+  .margemIcones {
+    margin-top: 2vw;
+  }
+
+  .divBotoes {
+    margin-top: 3vw;
+  }
+
+  .margemFotoGrande {
+    margin-top: 12vw;
+  }
+
+  .fotoGrande {
+    width: 65%;
+    height: auto;
+  }
+
+  .divBioWrapper {
+    width: 96vw;
+  }
+
+  .divBioEsquerda {
+    height: 10%;
+    margin-top: 6vw;
+  }
+
+  .divBioDireita {
+    width: 80vw;
+  }
+
+  .magemTituloWatchMe {
+    margin-top: 15vw;
+  }
+
+  .margemImagemWatchMe {
+    margin-top: 4vw;
+  }
+
+  .youtubeContainer {
+    margin-top: 4vw;
+    width: 90%;
+  }
+
+  .margemGigante {
+    margin-top: 15vw;
   }
 }
 
 /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 @media (max-width:600px) {
-  .container {
+  /* .container {
     background-color: grey;
+  } */
+
+  .margemLogo {
+    margin-top: 12vw;
+  }
+
+  .logo {
+    width: 87px;
+    height: 87px;
+  }
+
+  .margemDivImagemUm {
+    margin-top: 6vw;
+  }
+
+  .imagemUm {
+    width: 469px;
+    height: 469px;
+  }
+
+  .divBotoes {
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .botao {
+    font-size: 20px;
+    width: 280px;
+  }
+
+  .divBioWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .divBioDireita {
+    width: 95vw;
+    margin-top: -1.5vw;
+  }
+
+  .imagemBio {
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+
+  .margemIconesBio {
+    margin-top: 3vw;
+  }
+
+  .iconeBio:nth-child(n+2) {
+    margin-left: 15vw;
+  }
+
+  .magemTituloWatchMe {
+    margin-top: 10vw;
   }
 }
 
 /* smartphones, Android phones, landscape iPhone */
 @media (max-width:480px) {
-  .container {
+  /* .container {
     background-color: turquoise;
+  } */
+
+  .margemLogo {
+    margin-top: 15vw;
+  }
+
+  .logo {
+    width: 69px;
+    height: 69px;
+  }
+
+  .margemDivImagemUm {
+    margin-top: 8vw;
+  }
+
+  .imagemUm {
+    width: 372px;
+    height: 372px;
+  }
+
+  .divBioEsquerda {
+    display: none;
+  }
+
+  .divBioDireita {
+    margin-top: 0;
   }
 }
 
-/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-@media (max-width:320px) {
-  .container {
-    background-color: darkblue;
-  }
-}

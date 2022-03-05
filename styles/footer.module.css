@@ -2,7 +2,7 @@
     width: 100vw;
     height: 69px;
     background-color: #121212;
-    margin-top: 3.5vw;
+    margin-top: 4vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,4 +12,40 @@
     font-weight: 400;
     color: #fff;
     letter-spacing: 2px;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=- Media queries =-=-=-=-=-=-=-=-=-=-=-=- */
+/* hi-res laptops and desktops */
+@media (max-width:1281px) {
+    .footer {
+        margin-top: 6vw;
+    }
+}
+
+/* big landscape tablets, laptops, and desktops */
+@media (max-width:1025px) {
+    .footer {
+        margin-top: 7vw;
+    }
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (max-width:801px) {
+    .footer {
+        margin-top: 8vw;
+    }
+}
+
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (max-width:600px) {
+    .footer {
+        margin-top: 10vw;
+    }
+}
+
+/* smartphones, Android phones, landscape iPhone */
+@media (max-width:480px) {
+    .footer {
+        margin-top: 12vw;
+    }
 }

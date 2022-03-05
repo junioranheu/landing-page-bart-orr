@@ -67,12 +67,12 @@ export default function Index() {
   return (
     <div className={Styles.container}>
       {/* Primeira parte */}
-      <div className={Styles.margemLogo}>
-        <Image src={Logo} alt='' width={63} height={63} />
+      <div className={`${Styles.margemLogo} ${Styles.logo}`}>
+        <Image src={Logo} alt='' />
       </div>
 
-      <div className={`${Styles.divCard} ${Styles.margemDivImagemUm}`}>
-        <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
+      <div className={`${Styles.divCard} ${Styles.margemDivImagemUm} ${Styles.imagemUm}`}>
+        <Image className={Styles.card} src={ImagemUm} alt='' />
       </div>
 
       <div className={Styles.margemTitulo}>
@@ -106,8 +106,8 @@ export default function Index() {
       </div>
 
       {/* Foto grande */}
-      <div className={`${Styles.divCard} ${Styles.margemFotoGrande}`}>
-        <Image className={Styles.card} src={ImagemDois} alt='' width={857} height={857} />
+      <div className={`${Styles.divCard} ${Styles.margemFotoGrande} ${Styles.fotoGrande}`}>
+        <Image className={Styles.card} src={ImagemDois} alt=''/>
       </div>
 
       <div className={Styles.margemTitulo}>
@@ -137,7 +137,7 @@ export default function Index() {
             </span>
           </div>
 
-          <div style={{ marginTop: '1.8vw' }}>
+          <div className={Styles.margemIconesBio}>
             <Icone key={uuidv4()} icone={faYoutube} classes={Styles.iconeBio} url={linkYoutube} />
             <Icone key={uuidv4()} icone={faSoundcloud} classes={Styles.iconeBio} url={linkSoundCloud} />
             <Icone key={uuidv4()} icone={faFacebookSquare} classes={Styles.iconeBio} url={linkFacebook} />

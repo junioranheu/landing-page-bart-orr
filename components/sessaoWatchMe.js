@@ -25,7 +25,7 @@ export default function SessaoWatchMe({ styles, titulo, url, botao, isVideo, src
 
             {isVideo ?
                 (
-                    <div className={styles.videoContainer}>
+                    <div className={styles.youtubeContainer}>
                         <iframe className={styles.card} src={url} frameBorder='0' allowFullScreen
                             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'></iframe>
                     </div>

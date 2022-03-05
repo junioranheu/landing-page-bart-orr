@@ -1,6 +1,6 @@
 :root {
   --porcentagem-gradient: 0.55;
-} 
+}
 
 html, body {
   padding: 0;
@@ -61,3 +61,4 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: #8f6f4c;
 }
+
