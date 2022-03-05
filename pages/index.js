@@ -2,6 +2,7 @@ import { faAmazon, faApple, faElementor, faFacebookSquare, faItunes, faPinterest
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
+import { v4 as uuidv4 } from 'uuid';
 import Icone from '../components/icone';
 import ImagemDois from '../static/images/dois.webp';
 import Logo from '../static/images/logo.webp';
@@ -81,10 +82,10 @@ export default function Index() {
             </span>
           </div>
 
-          <div style={{ marginTop: '1.5vw' }}>
-            <Icone key={1} icone={faYoutube} classes={Styles.iconeBio} />
-            <Icone key={2} icone={faSoundcloud} classes={Styles.iconeBio} />
-            <Icone key={3} icone={faFacebookSquare} classes={Styles.iconeBio} />
+          <div style={{ marginTop: '1.8vw' }}>
+            <Icone key={uuidv4()} icone={faYoutube} classes={Styles.iconeBio} />
+            <Icone key={uuidv4()} icone={faSoundcloud} classes={Styles.iconeBio} />
+            <Icone key={uuidv4()} icone={faFacebookSquare} classes={Styles.iconeBio} />
           </div>
         </div>
       </div>
