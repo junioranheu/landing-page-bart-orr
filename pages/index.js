@@ -2,17 +2,26 @@ import { faAmazon, faApple, faElementor, faFacebookSquare, faItunes, faPinterest
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Icone from '../components/icone';
+import SessaoWatchMe from '../components/sessaoWatchMe';
+import ImagemCinco from '../static/images/cinco.webp';
 import ImagemDois from '../static/images/dois.webp';
 import Logo from '../static/images/logo.webp';
+import ImagemQuatro from '../static/images/quatro.webp';
 import ImagemTres from '../static/images/tres.webp';
 import ImagemUm from '../static/images/um.webp';
 import Styles from '../styles/index.module.css';
 
 export default function Index() {
+  useEffect(() => {
+    document.title = 'Bart Orr';
+  }, []);
+
   return (
     <div className={Styles.container}>
+      {/* Primeira parte */}
       <div className={Styles.divLogo}>
         <Image src={Logo} alt='' width={63} height={63} />
       </div>
@@ -34,6 +43,7 @@ export default function Index() {
         <FontAwesomeIcon icon={faSpotify} className={Styles.icone} />
       </div>
 
+      {/* Botões */}
       <div className={Styles.divBotoes}>
         <Link href='/'>
           <a className={Styles.botao}>
@@ -52,6 +62,7 @@ export default function Index() {
         </Link>
       </div>
 
+      {/* Foto grande */}
       <div className={Styles.divCard} style={{ marginTop: '5vw' }}>
         <Image className={Styles.card} src={ImagemDois} alt='' width={857} height={857} />
       </div>
@@ -60,9 +71,10 @@ export default function Index() {
         <span className={Styles.tituloDourado}>NAACP WINNER</span>
       </div>
 
+      {/* Bio */}
       <div className={Styles.divBioWrapper} style={{ marginTop: '9vw' }}>
         <div className={Styles.divBioEsquerda}>
-          <Image className={Styles.card} src={ImagemTres} alt='' width={632} height={860} />
+          <Image className={`${Styles.card} ${Styles.imagemBio}`} src={ImagemTres} alt='' width={632} height={860} />
         </div>
 
         <div className={Styles.divBioDireita}>
@@ -89,6 +101,42 @@ export default function Index() {
           </div>
         </div>
       </div>
+
+      {/* Sessão watch now #01 */}
+      <SessaoWatchMe key={uuidv4()} styles={Styles} titulo={'BARTHOLOGY'}
+        url={'https://music.apple.com/us/artist/barthology/1270923912'}
+        botao={'WATCH ME'} isVideo={false} src={ImagemQuatro} srcWidth={545} srcHeight={545} />
+
+      {/* Sessão watch now #02 */}
+      <SessaoWatchMe key={uuidv4()} styles={Styles} titulo={'BART ORR AND FRIENDS'}
+        url={'https://music.apple.com/us/artist/bart-orr-and-friends/1530045707'}
+        botao={'WATCH ME'} isVideo={false} src={ImagemCinco} srcWidth={545} srcHeight={545} />
+
+      {/* Sessão watch now #03 */}
+      <SessaoWatchMe key={uuidv4()} styles={Styles} titulo={'TELL ME'}
+        url={'https://www.youtube.com/embed/gksFlvowlnc'}
+        botao={'WATCH ME'} isVideo={true} src={''} srcWidth={0} srcHeight={0} />
+
+      {/* Sessão watch now #04 */}
+      <SessaoWatchMe key={uuidv4()} styles={Styles} titulo={'BORDERLINE COVER'}
+        url={'https://www.youtube.com/embed/hQaZlzoPOa8'}
+        botao={'WATCH ME'} isVideo={true} src={''} srcWidth={0} srcHeight={0} />
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   )
 }
