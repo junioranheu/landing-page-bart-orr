@@ -127,6 +127,8 @@ export default function Index() {
         url={'https://www.youtube.com/embed/hQaZlzoPOa8'}
         botao={'WATCH ME'} isVideo={true} src={''} srcWidth={0} srcHeight={0} />
 
+{/* Contato */}
+
       <br />
       <br />
       <br />
