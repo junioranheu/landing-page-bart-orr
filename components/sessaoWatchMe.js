@@ -9,7 +9,7 @@ export default function SessaoWatchMe({ styles, titulo, url, botao, isVideo, src
 
     return (
         <React.Fragment>
-            <div style={{ marginTop: '5vw' }}>
+            <div className={styles.magemTituloWatchMe}>
                 <span className={styles.titulo}>{titulo}</span>
             </div>
 
@@ -25,12 +25,12 @@ export default function SessaoWatchMe({ styles, titulo, url, botao, isVideo, src
 
             {isVideo ?
                 (
-                    <div className={styles.videoContainer} style={{ marginTop: '1.2vw' }}>
+                    <div className={styles.videoContainer}>
                         <iframe className={styles.card} src={url} frameBorder='0' allowFullScreen
                             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'></iframe>
                     </div>
                 ) : (
-                    <div className={styles.divCard} style={{ marginTop: '1vw', cursor: 'pointer' }} title={`Watch now: ${titulo}`} onClick={() => redirecionarLink()}>
+                    <div className={`${styles.divCard} ${styles.margemImagemWatchMe}`} title={`Watch now: ${titulo}`} onClick={() => redirecionarLink()}>
                         <Image className={styles.card} src={src} alt='' width={srcWidth} height={srcHeight} />
                     </div>
                 )

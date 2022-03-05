@@ -4,10 +4,6 @@
   align-items: center;
 }
 
-.divLogo {
-  margin-top: 2.85vw;
-}
-
 .divCard {
   /* Shadow - https://www.cssmatic.com/box-shadow */
   -webkit-box-shadow: 25px 15px 44px -15px rgba(217, 193, 161, 0.24);
@@ -51,7 +47,7 @@
 
 /* =-=-=-=-=-=-=-=-=-=-=-=- Botões =-=-=-=-=-=-=-=-=-=-=-=- */
 .divBotoes {
-  margin-top: 1vw;
+  margin-top: 1.2vw;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -113,7 +109,8 @@
   padding-top: 1.2vw;
   padding-bottom: 2vw;
   border-radius: 5px;
-  margin-top: 1.98vw;
+  /* margin-top: 1.98vw; */
+  margin-top: 38px;
   /* background-color: blue; */
 }
 
@@ -143,6 +140,7 @@
 
 /* =-=-=-=-=-=-=-=-=-=-=-=- Youtube =-=-=-=-=-=-=-=-=-=-=-=- */
 .videoContainer {
+  margin-top: 1.2vw;
   overflow: hidden;
   position: relative;
   width: 45%;
@@ -160,4 +158,81 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=- Margens =-=-=-=-=-=-=-=-=-=-=-=- */
+.margemLogo {
+  margin-top: 2.85vw;
+}
+
+.margemDivImagemUm {
+  margin-top: 1.5vw;
+}
+
+.margemTitulo {
+  margin-top: 2vw;
+}
+
+.margemGigante{
+  margin-top: 9vw;
+}
+
+.margemIcones {
+  margin-top: 1vw;
+}
+
+.margemFotoGrande {
+  margin-top: 5vw;
+}
+
+.magemTituloWatchMe {
+  margin-top: 5vw;
+}
+
+.margemImagemWatchMe {
+  margin-top: 1vw;
+  cursor: pointer;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=- Media queries =-=-=-=-=-=-=-=-=-=-=-=- */
+/* hi-res laptops and desktops */
+@media (max-width:1281px) {
+  .container {
+    background-color: pink;
+  }
+}
+
+/* big landscape tablets, laptops, and desktops */
+@media (max-width:1025px) {
+  .container {
+    background-color: blue;
+  }
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (max-width:801px) {
+  .container {
+    background-color: green;
+  }
+}
+
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (max-width:600px) {
+  .container {
+    background-color: grey;
+  }
+}
+
+/* smartphones, Android phones, landscape iPhone */
+@media (max-width:480px) {
+  .container {
+    background-color: turquoise;
+  }
+}
+
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (max-width:320px) {
+  .container {
+    background-color: darkblue;
+  }
 }

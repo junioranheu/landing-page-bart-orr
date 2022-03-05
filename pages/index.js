@@ -42,13 +42,12 @@ export default function Index() {
       // console.log(yAtual);
 
       const valorMinimo = 0.55;
-      const valorMaximo = 0.88;
+      const valorMaximo = 0.90;
       const diferencaEntreMinMax = valorMaximo - valorMinimo;
       let valorGradient = valorMinimo + ((diferencaEntreMinMax / tamanhoTotalTelaY) * yAtual);
       // console.log(valorGradient);
 
       document.documentElement.style.setProperty('--porcentagem-gradient', valorGradient);
-      // document.title = 'Bart Orr | ' + yAtual + ' - ' + valorGradient;
     }
 
     // Título da página;
@@ -59,8 +58,7 @@ export default function Index() {
 
     // Scroll;
     if (tamanhoTotalTelaY) {
-      const env = process.env.NODE_ENV;
-      if (env === "production") {
+      if (process.env.NODE_ENV === 'production') {
         window.addEventListener('scroll', handleScroll);
       }
     }
@@ -69,19 +67,19 @@ export default function Index() {
   return (
     <div className={Styles.container}>
       {/* Primeira parte */}
-      <div className={Styles.divLogo}>
+      <div className={Styles.margemLogo}>
         <Image src={Logo} alt='' width={63} height={63} />
       </div>
 
-      <div className={Styles.divCard} style={{ marginTop: '1.5vw' }}>
+      <div className={`${Styles.divCard} ${Styles.margemDivImagemUm}`}>
         <Image className={Styles.card} src={ImagemUm} alt='' width={504} height={504} />
       </div>
 
-      <div style={{ marginTop: '2vw' }}>
+      <div className={Styles.margemTitulo}>
         <span className={Styles.titulo}>OUT NOW</span>
       </div>
 
-      <div style={{ marginTop: '0.9vw' }}>
+      <div className={Styles.margemIcones}>
         <FontAwesomeIcon icon={faAmazon} className={Styles.icone} onClick={() => { window.open(linkAmazon, '_blank') }} />
         <FontAwesomeIcon icon={faApple} className={Styles.icone} onClick={() => { window.open(linkApple, '_blank') }} />
         <FontAwesomeIcon icon={faYoutube} className={Styles.icone} onClick={() => { window.open(linkYoutube, '_blank') }} />
@@ -108,16 +106,16 @@ export default function Index() {
       </div>
 
       {/* Foto grande */}
-      <div className={Styles.divCard} style={{ marginTop: '5vw' }}>
+      <div className={`${Styles.divCard} ${Styles.margemFotoGrande}`}>
         <Image className={Styles.card} src={ImagemDois} alt='' width={857} height={857} />
       </div>
 
-      <div style={{ marginTop: '2vw' }}>
+      <div className={Styles.margemTitulo}>
         <span className={Styles.tituloDourado}>NAACP WINNER</span>
       </div>
 
       {/* Bio */}
-      <div className={Styles.divBioWrapper} style={{ marginTop: '9vw' }}>
+      <div className={`${Styles.divBioWrapper} ${Styles.margemGigante}`}>
         <div className={Styles.divBioEsquerda}>
           <Image className={`${Styles.card} ${Styles.imagemBio}`} src={ImagemTres} alt='' width={632} height={860} />
         </div>
@@ -168,11 +166,11 @@ export default function Index() {
         botao={'WATCH ME'} isVideo={true} src={''} srcWidth={0} srcHeight={0} />
 
       {/* Contato */}
-      <div style={{ marginTop: '9vw' }}>
+      <div className={Styles.margemGigante}>
         <span className={Styles.titulo}>FOLLOW BART ORR</span>
       </div>
 
-      <div style={{ marginTop: '0.9vw' }}>
+      <div className={Styles.margemIcones}>
         <FontAwesomeIcon icon={faFacebookSquare} className={Styles.icone} onClick={() => { window.open(linkFacebook, '_blank') }} />
         <FontAwesomeIcon icon={faInstagramSquare} className={Styles.icone} onClick={() => { window.open(linkInstagram, '_blank') }} />
         <FontAwesomeIcon icon={faTwitter} className={Styles.icone} onClick={() => { window.open(linkTwitter, '_blank') }} />
