@@ -46,7 +46,7 @@ export default function Index() {
     // console.log(tamanhoTotalTelaY);
 
     setTamanhoTotalTelaY(tamanhoTotalTelaY);
-  }
+  } 
 
   useEffect(() => {
     // Scroll: https://stackoverflow.com/questions/62497110/detect-scroll-direction-in-react-js;
