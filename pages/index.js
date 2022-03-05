@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { Aviso } from '../components/aviso';
 import Icone from '../components/icone';
 import SessaoWatchMe from '../components/sessaoWatchMe';
 import ImagemCinco from '../static/images/cinco.webp';
@@ -13,6 +14,7 @@ import ImagemQuatro from '../static/images/quatro.webp';
 import ImagemTres from '../static/images/tres.webp';
 import ImagemUm from '../static/images/um.webp';
 import Styles from '../styles/index.module.css';
+import EmojiAleatorio from '../utils/emojiAleatorio';
 
 export default function Index() {
   const linkAmazon = 'https://www.amazon.com/dp/B09RG95HP5/ref=sr_1_1?keywords=Bart+Orr&qid=1643628408&refinements=p_n_feature_browse-bin%3A625150011&rnid=625149011&s=dmusic&search-type=ss&sr=1-1&tag=linkfire-smarturl-20';
@@ -23,6 +25,18 @@ export default function Index() {
   const linkFacebook = 'https://www.facebook.com/barthologhy';
   const linkInstagram = 'https://www.instagram.com/bart_orr/?utm_medium=copy_link';
   const linkTwitter = 'https://twitter.com/bart_orr?s=21';
+
+  useEffect(() => {
+    // Título da página;
+    document.title = 'Bart Orr — Em React.js, Next.js';
+
+    // Aviso;
+    const msg =
+      `Olá! ${EmojiAleatorio()}<br/><br/> 
+      Essa landing page foi replicada, sem fins lucrativos, a fim de estudo apenas, utilizando React.js e Next.js, a partir de um projeto real, de outra pessoa.<br/><br/> 
+      Todos direitos reservados à @pardaljoao e @bart_orr.`;
+    Aviso.custom(msg, 20000);
+  }, []);
 
   const [tamanhoTotalTelaY, setTamanhoTotalTelaY] = useState(0);
   function verificarTamanhoTotalTelaY() {
@@ -49,9 +63,6 @@ export default function Index() {
 
       document.documentElement.style.setProperty('--porcentagem-gradient', valorGradient);
     }
-
-    // Título da página;
-    document.title = 'Bart Orr — Em React.js, Next.js';
 
     // Atribuir valor à variável tamanhoTotalTelaY, usada em handleScroll();
     verificarTamanhoTotalTelaY();
@@ -107,7 +118,7 @@ export default function Index() {
 
       {/* Foto grande */}
       <div className={`${Styles.divCard} ${Styles.margemFotoGrande} ${Styles.fotoGrande}`}>
-        <Image className={Styles.card} src={ImagemDois} alt=''/>
+        <Image className={Styles.card} src={ImagemDois} alt='' />
       </div>
 
       <div className={Styles.margemTitulo}>

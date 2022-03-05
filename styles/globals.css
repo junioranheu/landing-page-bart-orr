@@ -1,5 +1,7 @@
 :root {
   --porcentagem-gradient: 0.55;
+  --cor-principal: #BF9B74;
+  --toastify-color-progress-light: var(--cor-principal);
 }
 
 html, body {
