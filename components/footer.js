@@ -5,10 +5,11 @@ export default function Footer() {
     return (
         <div className={Styles.footer}>
             <span>
+                Developed by&nbsp;
                 <Link href='https://github.com/junioranheu'>
                     <a target='_blank'>
                         <span>
-                            Developed by <span className='cor-principal-hover'>@junioranheu</span>
+                            <span className='cor-principal-hover'>@junioranheu</span>
                         </span>
                     </a>
                 </Link> |&nbsp;
