@@ -7,8 +7,8 @@ export default function Footer() {
             <span>
                 <Link href='https://github.com/junioranheu'>
                     <a target='_blank'>
-                        <span className='cor-principal-hover'>
-                            Developed by @junioranheu
+                        <span>
+                            Developed by <span className='cor-principal-hover'>@junioranheu</span>
                         </span>
                     </a>
                 </Link> |&nbsp;
