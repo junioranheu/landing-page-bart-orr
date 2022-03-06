@@ -31,6 +31,11 @@ html, body {
   background-size: cover;
 }
 
+.cor-principal-hover:hover {
+  color: var(--cor-principal) !important;
+  transition: .3s ease-in
+}
+
 img {
   /* Sem drag */
   pointer-events: none;
@@ -63,4 +68,3 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: #8f6f4c;
 }
-
