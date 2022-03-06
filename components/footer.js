@@ -13,16 +13,20 @@ export default function Footer() {
                     </a>
                 </Link> |&nbsp;
 
-                {new Date().getFullYear()} |&nbsp;
+                {new Date().getFullYear()}
 
-                All rights reserved to&nbsp;
-                <Link href='https://www.instagram.com/pardaljoao/?hl=en'>
-                    <a target='_blank'>
-                        <span>
-                            @pardaljoao
-                        </span>
-                    </a>
-                </Link>
+                <span className={Styles.spanBarraVertical}> | </span>
+
+                <span className={Styles.spanDireitosReservados}>
+                    All rights reserved to&nbsp;
+                    <Link href='https://www.instagram.com/pardaljoao/?hl=en'>
+                        <a target='_blank'>
+                            <span>
+                                @pardaljoao
+                            </span>
+                        </a>
+                    </Link>
+                </span>
             </span>
         </div>
     )

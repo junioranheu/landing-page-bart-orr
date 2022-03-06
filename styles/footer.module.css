@@ -33,6 +33,16 @@
 @media (max-width:801px) {
     .footer {
         margin-top: 8vw;
+        text-align: center;
+    }
+
+    .spanBarraVertical {
+        display: none;
+    }
+
+    .spanDireitosReservados {
+        margin-top: 0.5vw;
+        display: block;
     }
 }
 
