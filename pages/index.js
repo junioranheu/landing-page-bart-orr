@@ -34,6 +34,7 @@ export default function Index() {
     const msg =
       `Olá! ${EmojiAleatorio()}<br/><br/> 
       Essa landing page foi replicada, sem fins lucrativos, a fim de estudo apenas, utilizando React.js e Next.js, a partir de um projeto real, de outra pessoa.<br/><br/> 
+      Feito por @junioranheu<br/><br/> 
       Todos os direitos reservados à @pardaljoao e @bart_orr.`;
     Aviso.custom(msg, 20000);
   }, []);
