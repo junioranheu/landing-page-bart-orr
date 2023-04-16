@@ -9,7 +9,7 @@ Esse foi o meu primeiro contato com o React.js e Next.js. Definitivamente aqui f
 
 
 ## Habilidades
-React.js, Next.js, HTML, CSS
+React.js, Next.js, HTML, CSS.
 
 
 ## Publicação
