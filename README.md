@@ -1,4 +1,4 @@
-# Landing page da Airbnb em React.js
+# Landing page em React.js
 
 Projeto simples de replicação de uma landing page real que foi previamente desenvolvida por meu amigo @PardalJao utilizando Elementor, mas agora recriada React.js e Next.js.
 
